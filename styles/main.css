@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Indie+Flower&display=swap');
+
+/* General Styles */
+:root{
+    --site-title-color: rgba(0, 0, 96, 0.879);
+    --font-color:rgb(255, 143, 6);
+}
+*{box-sizing: border-box;}
+
+body{
+    padding:0;
+    margin:0;
+    background-color: rgb(255, 236, 226);
+    background-position: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+
+/* container settings */
+#main{
+    width:100%;
+    height:auto;
+    max-width:100%;
+    min-width: 300px;
+    margin:0 auto;
+}
+
+/* flex container settings */
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* =====================
+HEADER */
+header{
+    width:100%;
+    text-align: center;
+    background-color: var(--site-title-color);
+    margin-bottom:1em;
+    padding:2em;
+    border-bottom:1px solid #683b04ba;
+}
+
+#title{
+    text-transform: uppercase;
+    font-family:'Bangers', cursive;
+    color:var(--font-color);
+    font-size:4rem;
+    letter-spacing: 2px;
+    text-shadow:5px 5px 10px rgb(34, 20, 1);
+    margin: 0 ;
+}
+@media (max-width:450px){
+    #title{
+        font-size:2.5em;
+    }
+}
+
+
+
+/* =====================
+FIGURE */
+
+figure{
+    text-align:center;
+    font-weight:bold;
+    font-size:1rem;
+}
+
+#image{
+    width:90%;
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+    border-radius:90%;
+    box-shadow: 5px 5px 5px rgb(29, 28, 28);
+}
+figcaption{
+    /* background-color:green; */
+    margin-top:1em;
+}
+
+@media (min-width:600px){
+    #image{ 
+        width:50%;
+        max-width:50%;
+        margin:0 auto;
+        height:auto;
+    }
+}
+
+/* =====================
+MAIN*/
+hr{
+    width:25%;
+    border:.90px solid rgba(116, 114, 114, 0.666);
+    box-shadow: 2px 2px 2px black;
+}
+
+h2{
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:1.5rem;
+}
+
+#tribute-info{
+    width:90%;
+    max-width: 90%;
+    margin-bottom:1em;
+    font-size: 1rem;
+}
+
+#tribute-info ul{
+    margin:0 auto;
+    width:65%;
+}
+
+#tribute-info strong{
+    font-size:1rem;
+    font-family: monospace;
+}
+
+#tribute-info ul li{
+    list-style-type: none;
+    background-image:url(../images/4_star_dragonball.jpeg);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 0% 6%;
+    margin-bottom:.5em;
+    padding-left:2em;
+}
+
+#tribute-info li strong::after{
+    content: ':';
+}
+
+.tribute-links{
+    margin: 10em auto;
+    text-align: center;
+    width: 60%;
+}
+
+#tribute-link{
+    color:rgb(225, 146, 0);
+    text-decoration: none;
+}
+
+#tribute-link:hover, #tribute-link:focus{
+    color:rgb(109, 62, 4);
+    text-decoration:underline;
+}
+
+
+/* Apply styles to tribute-info after 320px */
+@media (min-width:320px){
+    #tribute-info{
+        width:100%;
+        max-width: 425px;
+        font-size: 1rem;
+    }
+    #tribute-info ul{
+        width:80%;
+        max-width: 80%;
+    }
+    .tribute-links{
+        font-size: .5rem;
+        width:50%;
+        margin: 4em auto;
+    }
+}
+
+/* apply styles to tribute-info after 675px */
+@media (min-width:675px){
+
+    #tribute-info{
+        padding:1em;
+        width:90%;
+        max-width: 800px;
+        font-size:1.4rem;
+    }
+
+    h2{margin-bottom:2em;
+    }
+    #tribute-info strong{
+        font-size:1.5rem;
+    }
+    
+}
+
+#main{
+    background-image: url('../images/dragonball-char.png'),url('../images/tori-bot.png');
+    background-repeat: no-repeat;
+    background-size:20%,15%;
+    background-position: bottom left,bottom right;
+}
+
+/* =====================
+FOOTER */
+
+footer{
+    padding:2em;
+    background-color: var(--site-title-color);
+    color:var(--font-color);
+    font-weight:700;
+    text-align:center;
+    font-family: monospace;
+}
